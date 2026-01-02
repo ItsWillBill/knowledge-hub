@@ -1,0 +1,42 @@
+# --- IDE / OS Specific ---
+.idea/
+.vscode/
+*.swp
+*.DS_Store
+.settings/
+.classpath
+.project
+.factorypath
+
+# --- Backend (Spring Boot / Maven) ---
+backend/target/
+backend/*.jar
+backend/*.war
+backend/*.ear
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/.metadata/
+backend/bin/
+backend/DependencySourceFiles/
+
+# --- Frontend (Angular / Node) ---
+frontend/node_modules/
+frontend/dist/
+frontend/tmp/
+frontend/.angular/
+frontend/.cache/
+frontend/npm-debug.log*
+frontend/yarn-error.log*
+frontend/.editorconfig
+frontend/.browserslistrc
+
+# --- Docker & Environment ---
+.env
+*.db
+docker/db_data/
+postgres_data/
+
+# --- Security (Never commit secrets) ---
+**/secrets/*.xml
+**/config/jwt_secret.txt
+*.pem
+*.key
