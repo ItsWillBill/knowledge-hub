@@ -11,4 +11,4 @@
 2. Clonez le projet : `git clone https://github.com/ItsWillBill/knowledge-hub.git`
 3. Lancez tout le stack :
    ```bash
-   docker-compose up --build
+   docker compose up --build

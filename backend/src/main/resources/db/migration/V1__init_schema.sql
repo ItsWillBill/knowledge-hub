@@ -1,5 +1,5 @@
 CREATE TABLE roles (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     name VARCHAR(20) NOT NULL UNIQUE
 );
 CREATE TABLE users (
@@ -10,8 +10,8 @@ CREATE TABLE users (
     enabled BOOLEAN DEFAULT TRUE
 );
 CREATE TABLE user_roles (
-    user_id BIGINT REFERENCES users(id),
-    role_id INTEGER REFERENCES roles(id),
+    user_id BIGSERIAL REFERENCES users(id),
+    role_id BIGSERIAL REFERENCES roles(id),
     PRIMARY KEY (user_id, role_id)
 );
 
@@ -23,7 +23,7 @@ CREATE TABLE documents (
     file_type VARCHAR(50),
     file_size BIGINT,
     status VARCHAR(20) DEFAULT 'UPLOADED',
-    owner_id BIGINT REFERENCES users(id),
+    owner_id BIGSERIAL REFERENCES users(id),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
